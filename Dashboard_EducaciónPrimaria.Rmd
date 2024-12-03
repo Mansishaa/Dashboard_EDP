@@ -1,0 +1,260 @@
+---
+title: "DASHBOARD: EDUCACIÓN BÁSICA"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Tablas Generales {data-icon="fa-signal"}
+===================================== 
+
+
+
+
+Column {data-width=600}{.tabset}
+-----------------------------------------------------------------------
+
+### Mapa de calor
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/Mapa_calor.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+Column {data-width=600}
+-----------------------------------------------------------------------
+
+### Presupuesto asignado a la Educación Primaria (2015-2023)
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/PRESUPUESTO_TOTAL.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+### Análisis
+
+**Mapa de calor:**
+
+- Valores cercanos a 0.09 (o más altos): Están en colores más anaranjados, indicando que esos departamentos tienen un presupuesto mayor en comparación con otros.
+
+- Valores más bajos (como 0.20): Están en colores más claros, indica un presupuesto menor en esos departamentos.
+
+Sobre la leyenda:
+
+- below25%: Los departamentos cuyo presupuesto está en el 25% inferior.
+
+- 25-50%: Los departamentos cuyo presupuesto está entre el 25% y el 50%.
+
+- 50-75%: Los departamentos cuyo presupuesto está entre el 50% y el 75%.
+
+- above75%: Los departamentos cuyo presupuesto está en el 25% superior (más altos).
+
+Esto significa que esos departamentos están recibiendo una gran parte del presupuesto en comparación con otros, probablemente en los años en que hubo mayores asignaciones de recursos. Estas casillas reflejan las áreas con mayor presupuesto en un contexto temporal.
+
+GeoData Analytics {data-icon="fa-table"}
+=====================================  
+
+Column {data-width=600}{.tabset}
+-----------------------------------------------------------------------
+
+### PIA General en Provincias
+
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/PIA_GEN.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+### Menos PIA asignado en Provincias 
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/MENOS_PIA.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+### Más PIA asignado en Provincias 
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/MAS_PIA.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+Column {data-width=600}{.tabset}
+-----------------------------------------------------------------------
+### PIM General en Provincia
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/PIM_GEN.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+### Menos PIM asignado en Provincias 
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/MENOS_PIM.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+### Más PIM asignado en Provincias 
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/MAS_PIM.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+===================================== 
+
+Column {data-width=600}{.tabset}
+-----------------------------------------------------------------------
+### Mapa rendieminto académico: En inicio
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/RENDIMIENTO_ACAD_INICIO.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+### Mapa rendimiento académico: Satisfacción
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/RENDIMIENTO_ACAD_SATISFAC.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+### Mapa Pobreza estimada
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/POBREZA.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+
+Optimización {data-icon="fa-cogs"}
+===================================== 
+
+Column {data-width=600}{.tabset}
+-----------------------------------------------------------------------
+
+### Gráfico de dispersión (2015)
+
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/visualization.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+### Gráfico de dispersión (2023)
+
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/vis1.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+
+Column {data-width=600}{.tabset}
+-----------------------------------------------------------------------
+
+### Gráfico de optimización (2015)
+
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/visualization (2).png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
+
+
+### Gráfico de dispersión (2023)
+
+```{r}
+library(png)
+library(grid)
+# Leer la imagen PNG
+img <- readPNG("C:/Users/LENOVO/Desktop/DASHBOARD_EP/Dashboard_EDP/images/vis2.png")  # Asegúrate de poner la ruta correcta
+
+# Mostrar la imagen con grid
+grid.raster(img)
+
+```
